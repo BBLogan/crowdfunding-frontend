@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import postLogin from "../api/post-login.js";
 
 function LoginForm() {
-    const navigate = useNavigatge();
+    const navigate = useNavigate();
 
     const [credentials, setCredentials] = useState({ 
         username: "", 
@@ -12,7 +12,7 @@ function LoginForm() {
     
     const handleChange = (event) => {
         const { id, value } = event.target;
-        setCredentails((prevCredentials) => ({
+        setCredentials((prevCredentials) => ({
             ...prevCredentials,
             [id]: value,
         }));
@@ -34,7 +34,7 @@ function LoginForm() {
     return (
         <form>
             <div>
-                <label htmlFpr="username">Username</label>
+                <label htmlFor="username">Username</label>
                 <input 
                     type="text" 
                     id="username" 
@@ -50,7 +50,7 @@ function LoginForm() {
                 onChange={handleChange}
                 />                
             </div>
-            <button type="submit" onCLick={handleSubmit}>Login
+            <button type="submit" onClick={handleSubmit}>Login
             </button>
         </form>
     );
