@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage.jsx";
 import ProjectPage from "./pages/ProjectPage.jsx";
 
-import NavBar from "./components/NavBar.jsx";
+import NavBar from "yers./components/NavBar.jsx";
 
 const router = createBrowserRouter([
   {
